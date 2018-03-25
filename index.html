@@ -9,12 +9,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <style>
+        #la-nav {
+            transition: height .5s;
+        }
+    </style>
 
 </head>
 
 <body>
     <nav>
-        <div id="la-nav" class="nav-wrapper  grey darken-2" onmouseover="hover()">
+        <div id="la-nav" class="nav-wrapper  grey darken-2" onmouseover="hover()" onmouseout="dishover()">
             <a href="#" class="brand-logo">Snipcart Test</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
@@ -41,17 +46,29 @@
             </button>
 
         </div>
-        <script>
-            var hover = function () {
-                document.getElementById('la-nav').style.color = "blue";
-            }
-        </script>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
         <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="ZTk3YTc0NTItNDAzZi00YTcwLTkwMjMtOTIyZjkzMzQxZGFkNjM2NTUwMTQxNjM1MDgyNzk3"
             id="snipcart"></script>
 
         <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+        <script>
+            function hover() {
+
+                // console.log('ff');
+                document.getElementById('la-nav').style.height = "80px";
+                // document.getElementById('la-nav').style.backgroundColor = "yellow";
+
+            }
+            function dishover() {
+
+                // console.log('ff');
+                document.getElementById('la-nav').style.height = "64px";
+
+            }
+        </script>
+
 </body>
 
 </html>
