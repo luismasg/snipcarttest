@@ -13,9 +13,25 @@
 </head>
 
 <body>
+    <nav>
+        <div id="la-nav" class="nav-wrapper  grey darken-2" onmouseover="hover()">
+            <a href="#" class="brand-logo">Snipcart Test</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="">stuff 1</a>
+                </li>
+                <li>
+                    <a href="#">stuff 2</a>
+                </li>
+                <li>
+                    <a href="#">stuff3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <p style="text-align:center;margin:0 auto;width:100vw;padding-top:30px;">Test Cart to try out snipcart</h1>
         <div style="display:flex;justify-content:space-evenly; padding:40px">
-            <button class="snipcart-add-item waves-effect waves-light btn" data-item-id="2" data-item-name="Bacon" data-item-price="3.00"
+            <button class="snipcart-add-item waves-effect waves-light btn " data-item-id="2" data-item-name="Bacon" data-item-price="3.00"
                 data-item-weight="20" data-item-url="https://github.io" data-item-description="Some fresh bacon">
                 Buy bacon
             </button>
@@ -25,6 +41,11 @@
             </button>
 
         </div>
+        <script>
+            var hover = function () {
+                document.getElementById('la-nav').style.color = "blue";
+            }
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
         <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="ZTk3YTc0NTItNDAzZi00YTcwLTkwMjMtOTIyZjkzMzQxZGFkNjM2NTUwMTQxNjM1MDgyNzk3"
